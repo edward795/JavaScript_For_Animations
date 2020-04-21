@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <h2> JavaScript For Animations in WebPage</h2>
+  <p>The use of JavaScript for making webpages dynamic,for form validations and create responses over webpages is widely known to us
+.But do we know the extent to which JavaScript can be used for Animations and other Multimedia applications.
+JavaScript is among the most powerful and flexible programming languages of the web. It powers the dynamic behavior on most websites, including this one.
+Here is an example Animation created using JavaScript.</p>   
+  <h4>Animation Example 1</h4>
+   <head>
+      <title>JavaScript Animation</title>
+   <style>
+      img{
+       max-width: 25%;
+       max-height: 25%;
+       display: block; /* remove extra space below image */
+         }
+    </style>
+      
+      <script type = "text/javascript">
+         <!--
+            var imgObj = null;
+            
+            function init() {
+               imgObj = document.getElementById('myImage');
+               imgObj.style.position= 'relative'; 
+               imgObj.style.left = '0px'; 
+               imgObj.style.top='0px';
+            }
+            function moveRight() {
+               imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';
+            }
+            
+            function moveleft() {
+               imgObj.style.left = parseInt(imgObj.style.left) + (-10) + 'px';
+            }
+            
+            function moveup(){
+               imgObj.style.top=parseInt(imgObj.style.top) + (-10) + 'px';
+               }
+               
+            function movedown(){
+               imgObj.style.top=parseInt(imgObj.style.top) + (10) + 'px';
+               }
+            
+            window.onload = init;
+         //-->
+      </script>
+   </head>
+   
+   <body>   
+      <form>
+        <br/> <br/> <br/> <img id = "myImage" src="https://techcentral.co.za/wp-content/uploads/2019/08/pa-apple-2156-1120-1024x532@2x.jpg" /><br/>
+         <br/><br/> <p>Click buttons below to move the image </p>
+         &nbsp &nbsp &nbsp &nbsp<input type="button" value="Up" onclick="moveup();"/><br/> <br/>
+         <input type = "button" value = "Left" onclick = "moveleft();" /> <input type="button" value="Right" onclick="moveRight();"/><br/> <br/>
+         &nbsp &nbsp &nbsp<input type="button" value="Down" onclick="movedown();"/>
+         
+      </form>      
+   </body>
+</html>
+
+
+<html>
+   
+   <head>
+      <br/>
+      <br/>
+      <h4>Animation Example 2</h4>
+    <style>
+      img{
+       max-width: 25%;
+       max-height: 25%;
+       display: block; /* remove extra space below image */
+         }
+    </style>
+      <title>Rollover with a Mouse Events</title>
+      
+      <script type = "text/javascript">
+         <!--
+            if(document.images) {
+               var image1 = new Image();     // Preload an image
+               image1.src = "https://www.pngitem.com/pimgs/m/104-1040709_green-apple-png-green-apple-fruit-png-transparent.png";
+               var image2 = new Image();     // Preload second image
+               image2.src = "http://think360.in/iRestaurant/wp-content/uploads/2018/04/orange.jpg";
+            }
+         //-->
+      </script>
+   </head>
+   
+   <body>
+      <b>Move your mouse over the image to see the result</b>
+      
+      <a href = "#" onMouseOver = "document.myImage.src = image2.src;"
+         onMouseOut = "document.myImage.src = image1.src;">
+         <img name = "myImage" src = "https://www.pngitem.com/pimgs/m/104-1040709_green-apple-png-green-apple-fruit-png-transparent.png" />
+      </a>
+   </body>
+</html>
