@@ -1,0 +1,5 @@
+ img{
+       max-width: 25%;
+       max-height: 25%;
+       display: block; /* remove extra space below image */
+         }
